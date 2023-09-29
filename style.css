@@ -6,12 +6,12 @@
 }
 
 body {
-  background-color: #ffcea3;
+  background-color: #ffeac2;
 }
 
 .posts {
   border-radius: 25px;
-  background-color: #ff8e2b;
+  background-color: #d46833;
   width: 1000px;
   margin: auto;
   padding: 20px;
@@ -26,7 +26,7 @@ body {
 header {
   width: 100%;
   height: 70px;
-  background-color: #ff8e2b;
+  background-color: #d46833;
   margin-bottom: 40px;
 }
 
