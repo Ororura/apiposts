@@ -1,9 +1,16 @@
 let articleDiv = document.getElementById("wrapper");
 
-function createTitleElement(title, body) {
+function createBodyElement(body) {
+  const bodyElement = document.createElement("strong");
+  bodyElement.classList.add("body");
+  bodyElement.textContent = body;
+  return bodyElement;
+}
+
+function createTitleElement(title) {
   const titleElement = document.createElement("div");
   titleElement.classList.add("title");
-  titleElement.textContent = `${title} ${body}`;
+  titleElement.textContent = title;
   return titleElement;
 }
 
@@ -20,12 +27,14 @@ async function getUser() {
   );
 
   response.data.forEach((el) => {
-    const titleElement = createTitleElement(el.title, el.body);
+    const titleElement = createTitleElement(el.title);
+    const bodyElement = createBodyElement(el.body);
     const idElement = createIdElement(el.userId, el.id);
     const posts = document.createElement("div");
-    posts.classList.add("posts")
+    posts.classList.add("posts");
 
     posts.appendChild(idElement);
+    posts.appendChild(bodyElement);
     posts.appendChild(titleElement);
 
     articleDiv.appendChild(posts);

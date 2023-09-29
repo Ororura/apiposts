@@ -20,7 +20,7 @@ body {
 
 .id {
   margin-bottom: 10px;
-  font-weight: bold;
+  font-size: 15px;
 }
 
 header {
@@ -37,4 +37,12 @@ header p {
   height: 70px;
   margin: auto;
   align-items: center;
+}
+
+strong {
+  font-size: 18px;
+}
+.title {
+  margin-top: 9px;
+  font-size: 15px;
 }
